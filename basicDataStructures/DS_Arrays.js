@@ -41,6 +41,11 @@ console.log("1. Inserting at specific index");
 arr.splice(0, 0, "newEle"); //this gets inserted at 0
 console.log(arr);
 
+console.log("1. Inserting at specific index");
+// arr[1]="hell"
+arr.splice(0, 4, "newEle4"); //this gets inserted at 0
+console.log(arr.length);
+
 //------------------------------------------------------------------------------
 // DELETE OPERATION
 
@@ -53,6 +58,19 @@ console.log("1.delete at end : ", deleteArr);
 
 deleteArr.splice(1, 1); // this will remove ele with index =1
 console.log("2.delete in between : ", deleteArr);
+
+//------------------------------------------------------------------------------
+
+// Update OPERATION
+
+//Update elements from Array
+console.log("------------------------");
+console.log("Update elements");
+let updateArr = new Array(1, 2, 3, 4, 5, 6);
+updateArr[1] = "updatedUsingDesiMethod";
+console.log("Update elements using desimethod", updateArr);
+updateArr.splice(2, 0, "updatedUsingSpliceMethod");
+console.log("Update elements using splice method : ", updateArr);
 
 //------------------------------------------------------------------------------
 //advance method we use in Development
@@ -94,3 +112,9 @@ console.log("compareArray1==compareArray2 ", compareArray1 == compareArray2); //
 //removing element from index 1 to 2(inclusive)
 compareArray1.splice(1, 2);
 console.log(compareArray1, compareArray2);
+
+console.log("------------------------");
+console.log("Using spread operator on arrays");
+let spreadArray_1 = [1, 2, 3, 4];
+spreadArray_1 = [...spreadArray_1, 5];
+console.log(spreadArray_1);
